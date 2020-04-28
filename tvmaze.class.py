@@ -51,6 +51,7 @@ class TVMaze:
         print('1. Lookup a show')
         print('2. Show today´s schedule (US) ')
         print('3. Enter date to see schedule (US)')
+        print('4. Quit')
         print('-'*33)
 
 
@@ -59,7 +60,7 @@ if __name__ == "__main__":
     while True:
         tv.menu()
         choice = input('Select a choice: ')
-        if choice not in ('1, 2, 3'):
+        if choice not in ('1, 2, 3, 4'):
             print('you must enter a valid number')
         elif choice == '1':
             show = input('Enter a show: ')
@@ -69,3 +70,5 @@ if __name__ == "__main__":
         elif choice == '3':
             date = input('Enter a date in format (2020-01-01) ')
             tv.todaysSchedule(date)
+        elif choice == '4':
+            break
